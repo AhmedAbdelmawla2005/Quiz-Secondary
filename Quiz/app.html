@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title> Quiz </title>
+  <link rel="stylesheet" href="codeFiles/style.css" type="text/css" media="all" />
+</head>
+<body>
+  <!-- 
+    .qn class ==> number of questions this lvl 
+    .questionContentBox class ==> the content of question
+    .subBox class ==> the type of subject
+  -->
+  <main>
+    
+    <div class="overCir"></div>
+    
+    <nav>
+      <div class="change"> 
+        <span class="changeNumBox"></span> 
+        &times; <bdo dir="rtl"> سؤال آخر </bdo> 
+        <div class="addChangeChanceProgress">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="timer"> 00 </div>
+      <div class="questionsAndPoints"> 
+        <span class="qn"> 5 </span> <sub>?</sub>
+      </div>
+    </nav>
+    
+    <div class="questionBox">
+      
+      <div class="nestedNav">
+        <span class="lvlNumBox">
+          lvl: 
+          <span class="lvl"> 1 </span>
+        </span>
+        <span class="lives"></span>
+        
+      </div>
+
+      <div class="questionContent">
+      <div class="subBox">Text</div>
+      <br />
+      <div class="questionContentBox">
+        
+        مل عدد جزيآت ATP الناتجة من
+        أكسدة سكر الجلوكوز
+        
+      </div>
+      
+      </div>
+    </div>
+    
+    <div class="answers">
+      
+      <button class="btn btn1"> 1 </button>
+      <button class="btn btn2"> 2 </button>
+      <button class="btn btn3"> 3 </button>
+      <button class="btn btn4"> 4 </button>
+      
+    </div>
+    
+
+  </main>
+  
+  
+
+
+<script src="codeFiles/js/questionsBank.js" type="module"></script>
+<script src="codeFiles/main.js" type="module"></script>
+</body>
+</html>

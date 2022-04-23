@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Home </title>
+<script src="codeFiles/js//fontawesome.js"></script>
+<style type="text/css" media="all">
+
+* {
+  padding: 0px ;
+  margin: 0px ;
+  box-sizing: border-box ;
+  text-align: center ;
+  overflow: hidden ;
+}
+
+/***** start style of Home page *****/
+
+.mainOfHome {
+  display: flex ;
+  flex-direction: column ;
+  justify-content: center ;
+  align-items: center ;
+  width: 100% ;
+  height: 100vh ;
+  background: #000 ;
+  color: #fff ;
+}
+
+.mainOfHome p {
+  width: 80% ;
+  margin: 20px ;
+  margin-top: 60px ;
+
+}
+
+.mainOfHome a {
+  width: 200px ;
+  height: 80px ;
+  text-decoration: none ;
+  margin: 20px;
+  color: #fff ;
+  font-size: 1.7em ;
+}
+
+.mainOfHome a::after {
+  content: "" ;
+  display: block ;
+  width: 100% ;
+  height: 3px ;
+  background: -webkit-linear-gradient( left , orange , red ) ;
+}
+
+.copyright {
+  color: #fff ;
+  position: absolute ;
+  bottom: 5px ;
+  font-size: 12px ;
+}
+
+star {
+  display: inline-block ;
+  color:#fff ;
+  filter: contrast( 300% ) ;
+  box-shadow: 0px 0px 0px 0px #fff ;
+  width: 0px ;
+  height: 0px ;
+  border-radius: 50% ;
+  position: absolute ;
+  animation: star 3s infinite alternate ;
+}
+
+@keyframes star {
+  0% {
+    box-shadow: 0px 0px 0px .1px #E2E2EB ,
+                0px 0px 0px .1px #E2E2EB ,
+                0px 0px 0px .1px #E2E2EB ;
+  }
+  100% {
+    box-shadow: 0px 0px 1px 1px rgba( 255 , 250 , 240 , .9 ) ,
+                0px 0px 1.5px 1.5px rgba( 255 , 250 , 240 , .9 ) ,
+                0px 0px 2px 2px rgba( 255 , 250 , 240 , .9 ) ;
+ 
+  }
+}
+/***** end style of Home page *****/
+
+/* setting */
+
+button.setting {
+  background: transparent ;
+  border: 2px solid #fff ;
+  border-radius: 20px ;
+  color: #fff ;
+  font-size: 35px ;
+  position: fixed ;
+  top: 20px ;
+  right: 30px ;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  text-align: center ;
+  width: 60px ;
+  height: 60px ;
+}
+
+nav {
+  height: 100vh ;
+  width: 0% ;
+  background: #fff ;
+  position: absolute ;
+  right: 0 ;
+  padding-top: 10px ;
+  transition: .5s ;
+  border-left: 2px solid #000 ;
+}
+
+.close {
+  background: orangered ;
+  color: #fff ;
+  width: 50px ;
+  height: 50px ;
+  border: none ;
+  outline: none ;
+  border-radius: 50% ;
+  font-size: 40px ;
+  text-align: center ;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  padding: 20px ;
+  margin: 10px ;
+}
+
+.background {
+  background: -webkit-linear-gradient( left , blue , purple ) ;
+  padding: 20px ;
+  border-radius: 20px ;
+  margin: 10px ;
+}
+
+.background_galary {
+  background: #fff ;
+  width: 0 ;
+  height: 100% ;
+  position: absolute ;
+  top: 0 ;
+  left: 0 ;
+  transition: .5s ;
+}
+
+.outter {
+  border: 1px solid #000 ;
+  border-radius: 20px ;
+  margin: 20px ;
+  padding: 10px ;
+}
+
+.outter div {
+  margin: 20px ;
+}
+
+.outter div:hover {
+  background: gray ;
+}
+
+/******************/
+
+.snow {
+  display: inline-block ;
+  position: absolute ;
+  top: 0px ;
+  color: #fff ;
+  font-size: 20px ;
+  animation: snow 1 10s linear ;
+}
+@keyframes snow {
+  0% {
+    transform: rotate(0deg) ;
+    top: -5% ;
+  }
+  
+  100% {
+    transform: rotate(1080deg);
+    top: 100% ;
+  }
+}
+
+heart {
+  display: inline-block ;
+  position: absolute ;
+  top: 0px ;
+  color: #fff ;
+  font-size: 20px ;
+  animation: heart 1 10s linear ;
+}
+
+heart::before {
+  content: "❤";
+  
+}
+@keyframes heart {
+  to{
+    transform: rotate(0deg) ;
+    top: -5% ;
+  }
+  
+  from {
+    transform: rotate(1080deg);
+    top: 100% ;
+  }
+}
+
+
+
+
+</style>
+</head>
+<body>
+  
+  <main class="mainOfHome">
+    
+    <button class="setting"> <i class="fas fa-cog"></i> </button>
+    <nav>
+      <button class="close close_nav">&times;</button>
+      <div class="background">background</div>
+    </nav>
+    
+    <a href="app.html"> إبدأ اللعب </a>
+    <p>
+      هذه لعبة تعليمية خاصة بالمرحلة الأولى من الصف الأول الثانوي
+      تحتوي هذه اللعبة على اسئلة من الصف الأول الثانوي من كل المواد
+      و عند الإنتهاء من اللعبة تظهر النتيجة للطالب و تقييم له
+    </p>
+    
+    <p class="copyright">
+      تم صنع هذا البرنامج بواسطة ( أحمد محمد عبدالمولى )
+      &copy;
+      حقوق النشر محفوظة 
+      2020-2021
+      تابع مسابقة نعم نستطيع
+    </p>
+    
+  </main>
+
+  <div class="background_galary">
+    <button class="close">&times;</button>
+    
+    <div class="outter">
+      <div onclick="Background.stars()"> Stars </div>
+      <div onclick="Background.snow()"> Snow </div>
+      <div onclick="Background.heart()"> Heart </div>
+    </div>
+  </div>
+<script>
+  // background style of home page ( stars ) 
+
+const $ = e => document.querySelector(e) ;
+const $$ = e => document.querySelectorAll(e) ;
+
+function create( element , append , ...class_style ) {
+  this.element = document.createElement( element ) ;
+  this.append = document.querySelector( append ) ;
+  for( c of class_style ) {
+    this.element.classList.add( c )
+  }
+  
+  this.text = function( txt = null ) {
+    this.text_content = document.createTextNode( txt ) ;
+    this.element.appendChild( this.text_content ) ;
+  }
+  
+  this.append.appendChild( this.element )
+}
+const $create = ( element , append , ...class_style ) => new create(element , append , ...class_style)
+
+
+$('button.setting').addEventListener('click' , function() {
+  $('nav').style.width = '60%' ; 
+});
+
+
+$$('.close').forEach( close => {
+  close.addEventListener('click' , e => {
+    e.target.parentNode.style.width = 0 ;
+  });
+});
+
+/*************************/
+
+$('.background').addEventListener('click' , _ => {
+  $('.background_galary').style.width = '100%'
+});
+
+class Background {
+  
+  static stars() {
+    for( let i = 0 ; i <= 30 ; i++ ) {
+    var star = document.createElement('star') ;
+  
+    var top = Math.floor( Math.random() * window.innerHeight );          
+    var left = Math.floor( Math.random() * window.innerWidth );          
+  
+    star.style.top = top + 'px' ;
+    star.style.left = left + 'px' ;
+  
+    document.querySelector('.mainOfHome').appendChild(star) ;
+    }
+  }
+  
+  static snow() {
+    $('.mainOfHome').style.background = ' #12CFE5EB' ;
+    setInterval(function() {
+      var snow = document.createElement('snow');
+          snow.classList = 'snow';
+          snow.innerHTML = '*',
+
+      snow.style.left = window.innerWidth * Math.random() + 'px';
+
+      setTimeout(function() {
+        snow.remove()
+       }, 10000);
+
+      document.querySelector('.mainOfHome').appendChild(snow);
+
+    } , 1500 )
+  }
+  
+  static heart() {
+    $('.mainOfHome').style.background = '#fff' ;
+    $('.mainOfHome').style.color = ' #000' ;
+    $('.copyright').style.color = ' #000' ;
+    $('a').style.color = ' #000' ;
+    
+    for( let i = 0 ; i <= 30 ; i++ ) {
+    var heart = document.createElement('heart') ;
+
+    var top = Math.floor( Math.random() * window.innerHeight );          
+    var left = Math.floor( Math.random() * window.innerWidth );          
+  
+    heart.style.top = top + 'px' ;
+    heart.style.left = left + 'px' ;
+  
+    document.querySelector('.mainOfHome').appendChild(heart) ;
+    }
+  }
+  
+}
+
+
+</script>
+</body>
+</html>
